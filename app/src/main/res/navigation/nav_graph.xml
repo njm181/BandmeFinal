@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.bandme.bandmefinal.presentation.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_validateEmailFragment"
+            app:destination="@id/validateEmailFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/validateEmailFragment"
+        android:name="com.bandme.bandmefinal.presentation.ValidateEmailFragment"
+        android:label="fragment_validate_email"
+        tools:layout="@layout/fragment_validate_email" >
+        <action
+            android:id="@+id/action_validateEmailFragment_to_validatePasswordFragment"
+            app:destination="@id/validatePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/validatePasswordFragment"
+        android:name="com.bandme.bandmefinal.presentation.ValidatePasswordFragment"
+        android:label="fragment_validate_password"
+        tools:layout="@layout/fragment_validate_password" >
+        <action
+            android:id="@+id/action_validatePasswordFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+        <action
+            android:id="@+id/action_validatePasswordFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTypeFragment"
+        android:name="com.bandme.bandmefinal.presentation.UserTypeFragment"
+        android:label="fragment_user_type"
+        tools:layout="@layout/fragment_user_type" >
+        <action
+            android:id="@+id/action_userTypeFragment_to_authCodeFragment"
+            app:destination="@id/authCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authCodeFragment"
+        android:name="com.bandme.bandmefinal.presentation.AuthCodeFragment"
+        android:label="fragment_auth_code"
+        tools:layout="@layout/fragment_auth_code" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bandme.bandmefinal.presentation.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
